@@ -17,19 +17,21 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
+
+
                 case R.id.navigation_search:
                     mTextMessage.setText(R.string.title_search);
                     return true;
-                case R.id.navigation_play:
+                case R.id.navigation_download:
                     mTextMessage.setText(R.string.title_download);
                     return true;
-                case R.id.navigation_playlist:
+                case R.id.navigation_play:
                     mTextMessage.setText(R.string.title_play);
                     return true;
-                case R.id.navigation_history:
+                case R.id.navigation_playlist:
                     mTextMessage.setText(R.string.title_playlist);
                     return true;
-                case R.id.navigation_download:
+                case R.id.navigation_history:
                     mTextMessage.setText(R.string.title_history);
                     return true;
             }

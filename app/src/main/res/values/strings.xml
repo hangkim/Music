@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Music</string>
     <string name="title_search">search</string>
-    <string name="title_play">play</string>
     <string name="title_download">download</string>
+    <string name="title_play">play</string>
     <string name="title_playlist">playlist</string>
     <string name="title_history">history</string>
 
