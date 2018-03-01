@@ -20,10 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
 
                 case R.id.navigation_search:
-                    mTextMessage.setText(R.string.title_search);
+                    mTextMessage.setText(R.string.title_search)
+                    ;
                     return true;
                 case R.id.navigation_download:
-                    mTextMessage.setText(R.string.title_download);
+                    mTextMessage.setText(R.string.title_download)
+                    ;
                     return true;
                 case R.id.navigation_play:
                     mTextMessage.setText(R.string.title_play);
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search);
 
         mTextMessage = findViewById(R.id.message);
         BottomNavigationView navigation = findViewById(R.id.navigation);
