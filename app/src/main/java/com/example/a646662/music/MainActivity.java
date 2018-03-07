@@ -5,10 +5,17 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
+    Button clk;
+    VideoView videoView;
+    MediaController mController;
+    Button b;
 
     private TextView mTextMessage;
 
@@ -20,23 +27,9 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
 
-                case R.id.navigation_search:
-                    mTextMessage.setText(R.string.title_search)
-                    ;
-                    return true;
-                case R.id.navigation_download:
-                    mTextMessage.setText(R.string.title_download)
-                    ;
-                    return true;
                 case R.id.navigation_play:
-                    VideoView videoView = findViewById()
                     return true;
-                case R.id.navigation_playlist:
-                    mTextMessage.setText(R.string.title_playlist);
-                    return true;
-                case R.id.navigation_history:
-                    mTextMessage.setText(R.string.title_history);
-                    return true;
+
             }
             return true;
         }
@@ -45,7 +38,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_play);
+
+        super. onResume();
+
+
+        VideoView videoView = findViewById(R.id.video);
+
+        mController = new MediaController (this);
+
+        videoView.setVideoPath("android.resource://" + getPackageName() + "/" +R.raw.havana);
+
+        mController.setAnchorView(videoView);
+
+        videoView.setMediaController(mController);
+
+        videoView.start();
+
+        public void
+
 
         mTextMessage = findViewById(R.id.message);
         BottomNavigationView navigation = findViewById(R.id.navigation);
